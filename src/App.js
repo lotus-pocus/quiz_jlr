@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import './App.css';
+import Header from "./Header";
 
 function App() {
   //properties
@@ -114,9 +115,8 @@ function App() {
 
   return (
     <div className="App">
-      {/*1. header*/}
-      <h1>Quiz</h1>
-
+      
+      <Header />
       {/*2. current score*/}
       <h2>current score: {score}</h2>
 
@@ -129,7 +129,7 @@ function App() {
         </div>
       ) : (
        /*3. Question Card*/
-        <div className='question-card'>
+        <div className='question-choice'>
           <h2>Question {currentQuestion + 1} out of {questions.length}</h2>
           <h3 className='question-text'>{questions[currentQuestion].text}</h3>
 
